@@ -5,117 +5,142 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BAC RÉUSSITE INTERNATIONAL - EXAM</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial;background:#0a1a3a;color:#fff}
-.top{background:#0a1a3a;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;border-bottom:1px solid #2a4a8a}
-.logo{font-weight:900;line-height:1}.logo span{color:#f5c518;font-size:11px;letter-spacing:2px}
-.pill{background:#1a2f5e;border:1px solid #2a4a8a;padding:7px 10px;border-radius:999px;font-weight:800;font-size:13px}
-.page{padding:14px;max-width:560px;margin:0 auto;padding-bottom:100px}
-.card{background:#16295c;border-radius:18px;padding:16px;margin:12px 0}
-.gold{background:linear-gradient(135deg,#b8860b,#f5c518);color:#111}
-.green{background:#0e5a3a;border:1px solid #2ecc71}
-h1{font-size:26px;margin:6px 0}h2{margin:4px 0 8px}h3{margin:8px 0}
-button{border:0;border-radius:12px;padding:13px 16px;font-weight:900;cursor:pointer;width:100%;margin:6px 0;font-size:15px}
-.btn-gold{background:#f5c518;color:#111}.btn-dark{background:#0a1a3a;color:#fff;border:1px solid #f5c518}.btn-white{background:#fff;color:#111}
-.opt{background:#fff;color:#111;border-radius:12px;padding:13px;margin:7px 0;cursor:pointer;display:flex;justify-content:space-between;font-weight:700}
-.opt.sel{outline:3px solid #f5c518}
-input,select{width:100%;padding:13px;border-radius:12px;border:1px solid #334;margin:6px 0;font-size:15px}
-.badge{display:inline-block;background:#0a1a3a;color:#f5c518;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:900}
-.lock{filter:blur(4px);user-select:none}.hidden{display:none}
-.nav{position:fixed;bottom:0;left:0;right:0;background:#0a1a3a;display:flex;justify-content:space-around;padding:10px;border-top:1px solid #2a4a8a}
-.nav button{width:auto;background:none;color:#fff;font-size:12px;padding:6px}.nav button.on{color:#f5c518}
-.fiche{background:#fff;color:#111;border-radius:14px;padding:14px;margin:10px 0}
-.q{font-weight:800;margin:10px 0}.small{font-size:13px;opacity:.85}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Arial;background:#070f2e;color:#fff;min-height:100vh}
+.top{position:sticky;top:0;z-index:20;background:#0a1a3a;border-bottom:1px solid #1e3a6e;padding:10px 12px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;gap:10px;align-items:center}
+.logo-icon{width:44px;height:44px;background:#f5c518;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#0a1a3a;font-size:15px;line-height:1;text-align:center}
+.logo b{font-size:17px;letter-spacing:.3px}.logo span{color:#f5c518;font-size:10px;letter-spacing:3px}
+.pill{background:#16295c;border:1px solid #2a4a8a;padding:8px 11px;border-radius:999px;font-weight:800;font-size:13px}
+.page{max-width:560px;margin:0 auto;padding:14px 14px 110px}
+.hero{background:linear-gradient(135deg,#0a1a3a,#1a3a7a);border:1px solid #2a4a8a;border-radius:22px;padding:18px;margin:12px 0;text-align:center}
+.hero .globe{font-size:54px}
+.hero h1{font-size:30px;line-height:1.1;margin:8px 0}.hero h1 span{color:#f5c518}
+.hero p{opacity:.9}
+.card{background:#16295c;border:1px solid #253d75;border-radius:20px;padding:16px;margin:12px 0}
+.card-gold{background:linear-gradient(135deg,#8a6500,#f5c518);color:#111;border-radius:20px;padding:18px;margin:12px 0}
+.card-green{background:#0e5a3a;border:1px solid #2ecc71;border-radius:20px;padding:14px;margin:12px 0;text-align:center;font-weight:800}
+.card-white{background:#fff;color:#111;border-radius:20px;padding:16px;margin:12px 0}
+h2{font-size:19px;margin-bottom:8px}h3{font-size:16px;margin-bottom:6px}
+button{border:0;border-radius:14px;padding:14px 16px;font-weight:900;cursor:pointer;width:100%;margin:7px 0;font-size:15px}
+.btn-gold{background:#f5c518;color:#111}.btn-dark{background:#0a1a3a;color:#fff;border:1px solid #f5c518}.btn-white{background:#fff;color:#111}.btn-blue{background:#2a5bff;color:#fff}
+.opt{background:#fff;color:#111;border-radius:16px;padding:14px;margin:8px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700}
+.opt small{font-weight:600;opacity:.7}.opt.sel{outline:3px solid #f5c518}
+.opt-big{padding:20px;font-size:18px}
+input,select{width:100%;padding:14px;border-radius:14px;border:1px solid #334;margin:7px 0;font-size:15px;background:#fff;color:#111}
+.badge{display:inline-block;background:#0a1a3a;color:#f5c518;padding:6px 11px;border-radius:999px;font-size:12px;font-weight:900}
+.badge-green{background:#0e5a3a;color:#fff}
+.lock{filter:blur(5px);user-select:none}
+.fiche{background:#fff;color:#111;border-radius:16px;padding:14px;margin:10px 0}
+.fiche h3{color:#0a1a3a}
+.q{font-weight:800;margin:10px 0}
+.small{font-size:13px;opacity:.85}
+.chip{display:inline-block;background:#eef2ff;color:#111;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:700;margin:3px}
+.progress{height:10px;background:#0a1a3a;border-radius:999px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;background:#f5c518}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#0a1a3a;border-top:1px solid #2a4a8a;display:flex;justify-content:space-around;padding:8px 4px;z-index:30}
+.nav button{width:auto;background:none;color:#cbd5e1;font-size:11px;padding:6px 4px;margin:0}.nav button.on{color:#f5c518}
+.bar{height:8px;background:#1e3a6e;border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;background:#f5c518;width:70%}
+.center{text-align:center}.big{font-size:34px}
 </style>
 </head>
 <body>
-<div class="top"><div class="logo">BAC RÉUSSITE<br><span>INTERNATIONAL</span></div><div><span class="pill" id="walletTop">7 000 F CFA</span> <span class="pill" id="currTop">🇹🇬 XOF</span></div></div>
+<div class="top"><div class="logo"><div class="logo-icon">EX<br>AM</div><div><b>BAC RÉUSSITE</b><br><span>INTERNATIONAL</span></div></div><div><span class="pill" id="walletTop">7 000 F CFA</span> <span class="pill" id="currTop">🇹🇬 XOF</span></div></div>
 <div class="page" id="app"></div>
 <div class="nav">
-<button onclick="show('home')" id="nHome">🏠 Accueil</button>
-<button onclick="show('cours')" id="nCours">📚 Cours</button>
-<button onclick="show('quiz')" id="nQuiz">📝 Quiz</button>
-<button onclick="show('annales')" id="nAnn">📄 Annales</button>
-<button onclick="show('wallet')" id="nWall">💰 Wallet</button>
+<button onclick="show('splash')" id="nSplash">🌍<br>Splash</button>
+<button onclick="show('home')" id="nHome">🏠<br>Accueil</button>
+<button onclick="show('cours')" id="nCours">📚<br>Cours</button>
+<button onclick="show('quiz')" id="nQuiz">📝<br>Quiz</button>
+<button onclick="show('annales')" id="nAnn">📄<br>Annales</button>
+<button onclick="show('wallet')" id="nWall">💰<br>Wallet</button>
+<button onclick="show('profil')" id="nProf">👤<br>Profil</button>
+<button onclick="show('outils')" id="nOut">🛠️<br>Outils</button>
 </div>
 <script>
 // ===== TES NUMEROS =====
-const CONFIG={whatsapp:"+22872230580",yasMoney:"+22872230580",moovMoney:"+22899288161"};
 function payerWhatsApp(){let m="Bonjour, je veux le Premium BAC REUSSITE - 500 F CFA. Voici ma capture de paiement.";window.open("https://wa.me/22872230580?text="+encodeURIComponent(m));}
-function payerYas(){alert("Envoie 500 F CFA sur Yas Money : +228 72 23 05 80\n\nEnsuite envoie ta capture sur WhatsApp au +228 72 23 05 80.");payerWhatsApp();}
-function payerMoov(){alert("Envoie 500 F CFA sur Moov Money : +228 99 28 81 61\n\nEnsuite envoie ta capture sur WhatsApp au +228 72 23 05 80.");payerWhatsApp();}
+function payerYas(){alert("Envoie 500 F CFA sur Yas Money : +228 72 23 05 80\n\nEnsuite envoie ta capture sur 【entity-WhatsApp¦canonical_name=WhatsApp】 au +228 72 23 05 80.");payerWhatsApp();}
+function payerMoov(){alert("Envoie 500 F CFA sur Moov Money : +228 99 28 81 61\n\nEnsuite envoie ta capture sur 【entity-WhatsApp¦canonical_name=WhatsApp】 au +228 72 23 05 80.");payerWhatsApp();}
 function buyPremium(){
   let c = DATA[state.country];
-  let choix = confirm("Payer Premium " + c.premium + " " + c.curr + " ?\n\nYas : +228 72 23 05 80\nMoov : +228 99 28 81 61\n\nClique OK pour ouvrir WhatsApp.");
-  if(choix){
-    payerWhatsApp();
-  }
+  let choix = confirm("Payer Premium " + c.premium + " " + c.curr + " ?\n\nYas : +228 72 23 05 80\nMoov : +228 99 28 81 61\n\nClique OK pour ouvrir 【entity-WhatsApp¦canonical_name=WhatsApp】.");
+  if(choix){ payerWhatsApp(); }
 }
-// ===== APP =====
-let state={country:'Togo',serie:'D',premium:false,operateur:'Yas Money'};
+let state={country:'Togo',serie:'D',premium:false,operateur:'Yas Money',userName:'Moussa',codeParrain:'MOUSSA2026'};
 const DATA={
-'Togo':{curr:'F CFA',code:'XOF',flag:'🇹🇬',premium:500,bal:7000,ops:['Yas Money','Moov Money Togo'],examDate:'2027-06-15',exam:'BAC',series:['C','D','A4','G2']},
-'Bénin':{curr:'F CFA',code:'XOF',flag:'🇧🇯',premium:500,bal:7000,ops:['MTN MoMo Bénin','Moov Money Bénin','Celtiis Cash'],examDate:'2027-06-22',exam:'BAC',series:['C','D','A4']},
-'Sénégal':{curr:'F CFA',code:'XOF',flag:'🇸🇳',premium:500,bal:7000,ops:['Orange Money','Wave','Free Money'],examDate:'2027-07-06',exam:'BAC',series:['S','L']},
-"Côte d'Ivoire":{curr:'F CFA',code:'XOF',flag:'🇨🇮',premium:500,bal:7000,ops:['Orange Money','MTN MoMo','Moov Money','Wave'],examDate:'2027-06-28',exam:'BAC',series:['C','D','A']},
-'Ghana':{curr:'GH₵',code:'GHS',flag:'🇬🇭',premium:13,bal:115,ops:['MTN MoMo Ghana','AirtelTigo Money','Telecel Cash'],examDate:'2027-05-12',exam:'WASSCE',series:['Science','Arts']},
-'Nigeria':{curr:'₦',code:'NGN',flag:'🇳🇬',premium:1250,bal:17500,ops:['OPay','PalmPay','MTN MoMo Nigeria'],examDate:'2027-05-17',exam:'WASSCE',series:['Science','Arts']},
-'Cameroun':{curr:'F CFA',code:'XAF',flag:'🇨🇲',premium:500,bal:7000,ops:['MTN MoMo','Orange Money'],examDate:'2027-06-14',exam:'BAC',series:['C','D']},
-'Mali':{curr:'F CFA',code:'XOF',flag:'🇲🇱',premium:500,bal:7000,ops:['Orange Money','Moov Money'],examDate:'2027-06-21',exam:'BAC',series:['C','D']},
-'Niger':{curr:'F CFA',code:'XOF',flag:'🇳🇪',premium:500,bal:7000,ops:['Airtel Money','Moov Money','Orange Money'],examDate:'2027-06-24',exam:'BAC',series:['C','D']},
-'Burkina Faso':{curr:'F CFA',code:'XOF',flag:'🇧🇫',premium:500,bal:7000,ops:['Orange Money','Moov Money'],examDate:'2027-06-20',exam:'BAC',series:['C','D']},
-'Guinée':{curr:'FG',code:'GNF',flag:'🇬🇳',premium:7500,bal:105000,ops:['Orange Money','MTN MoMo Guinée'],examDate:'2027-06-25',exam:'BAC',series:['C','D']}
+'Togo':{curr:'F CFA',code:'XOF',flag:'🇹🇬',premium:500,bal:7000,ops:['Yas Money','Moov Money Togo'],examDate:'2027-06-15',exam:'BAC',series:['C','D','A4','G2'],exams:['BEPC','Probatoire','BAC']},
+'Bénin':{curr:'F CFA',code:'XOF',flag:'🇧🇯',premium:500,bal:7000,ops:['MTN MoMo Bénin','Moov Money Bénin','Celtiis Cash'],examDate:'2027-06-22',exam:'BAC',series:['C','D','A4'],exams:['BEPC','BAC']},
+'Sénégal':{curr:'F CFA',code:'XOF',flag:'🇸🇳',premium:500,bal:7000,ops:['Orange Money','Wave','Free Money'],examDate:'2027-07-06',exam:'BAC',series:['S','L'],exams:['BFEM','BAC']},
+"Côte d'Ivoire":{curr:'F CFA',code:'XOF',flag:'🇨🇮',premium:500,bal:7000,ops:['Orange Money','MTN MoMo','Moov Money','Wave'],examDate:'2027-06-28',exam:'BAC',series:['C','D','A'],exams:['BEPC','BAC']},
+'Ghana':{curr:'GH₵',code:'GHS',flag:'🇬🇭',premium:13,bal:115,ops:['MTN MoMo Ghana','AirtelTigo Money','Telecel Cash'],examDate:'2027-05-12',exam:'WASSCE',series:['Science','Arts'],exams:['BECE','WASSCE']},
+'Nigeria':{curr:'₦',code:'NGN',flag:'🇳🇬',premium:1250,bal:17500,ops:['OPay','PalmPay','MTN MoMo Nigeria'],examDate:'2027-05-17',exam:'WASSCE',series:['Science','Arts'],exams:['BECE','WASSCE']},
+'Cameroun':{curr:'F CFA',code:'XAF',flag:'🇨🇲',premium:500,bal:7000,ops:['MTN MoMo','Orange Money'],examDate:'2027-06-14',exam:'BAC',series:['C','D'],exams:['BEPC','Probatoire','BAC']},
+'Mali':{curr:'F CFA',code:'XOF',flag:'🇲🇱',premium:500,bal:7000,ops:['Orange Money','Moov Money'],examDate:'2027-06-21',exam:'BAC',series:['C','D'],exams:['DEF','BAC']},
+'Niger':{curr:'F CFA',code:'XOF',flag:'🇳🇪',premium:500,bal:7000,ops:['Airtel Money','Moov Money','Orange Money'],examDate:'2027-06-24',exam:'BAC',series:['C','D'],exams:['BEPC','BAC']},
+'Burkina Faso':{curr:'F CFA',code:'XOF',flag:'🇧🇫',premium:500,bal:7000,ops:['Orange Money','Moov Money'],examDate:'2027-06-20',exam:'BAC',series:['C','D'],exams:['BEPC','BAC']},
+'Guinée':{curr:'FG',code:'GNF',flag:'🇬🇳',premium:7500,bal:105000,ops:['Orange Money','MTN MoMo Guinée'],examDate:'2027-06-25',exam:'BAC',series:['C','D'],exams:['BEPC','BAC']}
 };
 function fmt(n){return n.toLocaleString('fr-FR')}
 function daysLeft(){let d=new Date(DATA[state.country].examDate);let t=new Date();t.setHours(0,0,0,0);let diff=Math.ceil((d-t)/86400000);if(diff<0){d.setFullYear(d.getFullYear()+1);diff=Math.ceil((d-t)/86400000)}return diff}
 function updTop(){let c=DATA[state.country];document.getElementById('walletTop').textContent=fmt(c.bal)+' '+c.curr;document.getElementById('currTop').textContent=c.flag+' '+c.code}
-function paysOpt(){return Object.keys(DATA).map(p=>`<div class="opt ${p===state.country?'sel':''}" onclick="setPays('${p}')"><span>${DATA[p].flag} ${p}</span><span>${DATA[p].curr} • ${DATA[p].exam}</span></div>`).join('')}
+function paysOpt(){return Object.keys(DATA).map(p=>`<div class="opt ${p===state.country?'sel':''}" onclick="setPays('${p}')"><span>${DATA[p].flag} ${p}</span><span><small>${DATA[p].curr} • ${DATA[p].exam}</small></span></div>`).join('')}
 function setPays(p){state.country=p;state.operateur=DATA[p].ops[0];updTop();show('home')}
 function show(page){
 updTop();let a=document.getElementById('app');let c=DATA[state.country];let d=daysLeft();
 let msg=d>30?'Tu as le temps, on y va doucement':d>15?'On accélère 🔥':'Mode urgence 🔥';
 let isTogoBACD=(state.country==='Togo'&&c.exam==='BAC'&&state.serie==='D');
+// PAGE 1 SPLASH
+if(page==='splash')a.innerHTML=`<div class="hero"><div class="globe">🌍</div><div class="badge">EXAM</div><h1>BAC RÉUSSITE<br><span>INTERNATIONAL</span></h1><p>🎓 Des élèves qui célèbrent leur réussite</p><p>Révise. Réussis. Brille.</p><div class="bar" style="margin-top:14px"><i></i></div><p class="small" style="margin-top:8px">Chargement...</p><button class="btn-gold" onclick="show('home')">Commencer →</button></div>`;
+// PAGE 2-3 ESPACE + PAYS + CLASSE
 if(page==='home')a.innerHTML=`
-<div class="card gold"><div style="font-size:40px;text-align:center">🌍 EXAM</div><h1 style="text-align:center">BAC RÉUSSITE<br>INTERNATIONAL</h1><p style="text-align:center">Révise. Réussis. Brille.</p></div>
-<div class="card"><h2>1. Choisis ton espace</h2>
-<div class="opt" onclick="show('home')"><span>🇫🇷 ESPACE FRANCOPHONE</span><span>→</span></div>
-<div class="opt" onclick="show('home')"><span>🇬🇧 ENGLISH SPACE</span><span>→</span></div></div>
-<div class="card"><h2>2. Choisis ton pays</h2>${paysOpt()}</div>
-<div class="card"><h2>3. Série</h2>${c.series.map(s=>`<div class="opt ${s===state.serie?'sel':''}" onclick="state.serie='${s}';show('home')"><span>Série ${s}</span></div>`).join('')}</div>
-<div class="card green">${c.flag} ${state.country} - ${c.exam} ${state.serie} ${isTogoBACD?' - Contenu complet ✅':' - Contenu en cours de préparation'}</div>
-<div class="card gold"><div class="badge">COMPTE À REBOURS AUTOMATIQUE</div><h1>${c.exam} - J-${d}</h1><p>Examen le ${c.examDate} - ${msg}</p><p class="small">Mis à jour tout seul chaque jour. Si la date est passée, il passe à l'année prochaine.</p></div>
-<div class="card"><h2>Bonjour, Moussa ! 👋</h2><p>Premium: ${state.premium?'👑 PREMIUM ACTIF':'GRATUIT'}</p><button class="btn-gold" onclick="show('wallet')">Débloquer Premium - ${fmt(c.premium)} ${c.curr} 👑</button></div>
-<div class="card"><h2>🧠 Coach Intelligent</h2><p>❌ Faible: Suites géométriques 40%</p><p>❌ Faible: pH 50%</p><p>✅ Fort: ECM 90%</p><p><b>Plan du jour:</b> 20 min Suites géométriques + 10 quiz Loi binomiale + 15 min pH</p></div>
-<div class="card"><h2>📚 Cours</h2><button class="btn-dark" onclick="show('cours')">Voir les cours →</button></div>`;
+<div class="hero"><div class="globe">🌍</div><h1>BAC RÉUSSITE<br><span>INTERNATIONAL</span></h1><p>Choisis ton espace, ton pays, ta classe</p></div>
+<div class="card"><h2>2. Espace</h2><div class="opt opt-big ${''}" onclick="show('home')"><span>🇫🇷 ESPACE FRANCOPHONE</span><span>→</span></div><div class="opt opt-big" onclick="show('home')"><span>🇬🇧 ENGLISH SPACE</span><span>→</span></div></div>
+<div class="card"><h2>3. Pays</h2>${paysOpt()}</div>
+<div class="card"><h2>4. Classe / Examen / Série</h2><p class="small">Examens pour ${state.country} : ${c.exams.join(' → ')}</p>${c.series.map(s=>`<div class="opt ${s===state.serie?'sel':''}" onclick="state.serie='${s}';show('home')"><span>Série ${s}</span><span>✓</span></div>`).join('')}<button class="btn-dark" onclick="show('login')">Continuer vers Login →</button></div>
+<div class="card-green">${c.flag} ${state.country} - ${c.exam} ${state.serie} ${isTogoBACD?' - Contenu complet ✅':' - Contenu en cours de préparation'}</div>
+<div class="card-gold"><div class="badge">COMPTE À REBOURS AUTOMATIQUE</div><h1 style="font-size:30px;margin:8px 0">${c.exam} - J-${d}</h1><p>Examen le ${c.examDate} - ${msg}</p><p class="small">Mis à jour tout seul chaque jour. Si la date est passée, il passe à l'année prochaine.</p><div class="progress"><i style="width:${Math.min(90,100-d/3)}%"></i></div></div>
+<div class="card"><h2>Bonjour, ${state.userName} ! 👋</h2><p>Seulement tes matières, tes ressources, ton examen.</p><p>Premium: ${state.premium?'👑 PREMIUM ACTIF':'GRATUIT'}</p><button class="btn-gold" onclick="show('wallet')">Débloquer Premium - ${fmt(c.premium)} ${c.curr} 👑</button></div>
+<div class="card"><h2>🧠 Coach Intelligent</h2><p>❌ Faible: Suites géométriques 40%</p><div class="progress"><i style="width:40%"></i></div><p>❌ Faible: pH 50%</p><div class="progress"><i style="width:50%"></i></div><p>✅ Fort: ECM 90%</p><div class="progress"><i style="width:90%"></i></div><p><b>Plan du jour:</b> 20 min Suites géométriques + 10 quiz Loi binomiale + 15 min pH</p><p class="small">Ça fait 2 jours que tu n'as pas révisé la loi binomiale, 5 min ?</p></div>
+<div class="card"><h2>📚 Dernières ressources</h2><span class="chip">Maths - Limites</span><span class="chip">Physique - pH</span><span class="chip">SVT - Génétique</span><button class="btn-dark" onclick="show('cours')">Voir les cours →</button></div>`;
+// PAGE 5 LOGIN
+if(page==='login')a.innerHTML=`<div class="hero"><div class="globe">🔐</div><h1>Connexion</h1><p>Retrouve ton progrès + ton Wallet</p></div><div class="card"><h2>Login / Signup</h2><label>Ton prénom</label><input id="prenom" value="${state.userName}" placeholder="Ex: Moussa"><label>Email</label><input placeholder="ton@email.com"><label>Téléphone Yas / Moov</label><input placeholder="+228 ..."><button class="btn-gold" onclick="login()">Continuer →</button><button class="btn-white" onclick="login()">Continuer avec Google (G)</button><p class="small">Progrès + Solde sauvegardés.</p></div>`;
+// PAGE 7 COURS
 if(page==='cours'){
-if(!isTogoBACD){a.innerHTML=`<h1>📚 Cours</h1><div class="card"><h2>📚 Contenu en cours de préparation pour ${state.country} - ${c.exam} ${state.serie}</h2><p>Choisis Togo - BAC D pour voir le contenu complet.</p><button class="btn-gold" onclick="setPays('Togo')">Voir Togo BAC D →</button></div>`;return}
-a.innerHTML=`<h1>📚 Cours - Togo BAC D</h1>
-<div class="card gold"><h2>Maths - Réussir le BAC</h2><p>Limites • Probabilités • Trigonométrie • Loi binomiale • Suites • Exponentielle • Dérivation</p><button class="btn-dark" onclick="show('maths')">Commencer à réviser →</button></div>
+if(!isTogoBACD){a.innerHTML=`<h1>📚 Cours</h1><div class="card"><h2>📚 Contenu en cours de préparation pour ${state.country} - ${c.exam} ${state.serie}</h2><p>On prépare les fiches pour ton pays.</p><button class="btn-gold" onclick="setPays('Togo')">Voir Togo BAC D →</button></div>`;return}
+a.innerHTML=`<h1>📚 Cours & Fiches de révision</h1>
+<div class="card-gold"><h2>Maths - Réussir le BAC</h2><p>Limites • Probabilités • Trigonométrie • Loi binomiale • Suites • Exponentielle • Dérivation</p><button class="btn-dark" onclick="show('maths')">Commencer à réviser →</button></div>
 <div class="card"><h2>Physique-Chimie - Tout pour réussir</h2><p>Chimie: acides aminés, esters, pH, cinétique, organique. Physique: mécanique, électricité, optique, nucléaire, ondes.</p><button class="btn-gold" onclick="show('phys')">Commencer à réviser →</button></div>
-<div class="card"><h2>SVT</h2><p>Génétique • Immunologie • Géologie • Reproduction • Écologie • Photosynthèse</p><button class="btn-dark" onclick="show('svt')">Commencer →</button></div>`;
+<div class="card"><h2>SVT</h2><p>Génétique • Immunologie • Géologie • Reproduction • Écologie • Photosynthèse</p><button class="btn-dark" onclick="show('svt')">Commencer →</button></div>
+<div class="card"><h2>Français</h2><p>Dissertation • Commentaire composé • Contraction de texte</p><p class="small">L'aventure ambiguë • Une si longue lettre • Le Mandat</p></div>
+<div class="card"><h2>Hist-Géo • Anglais • Philo • ECM</h2><p>CEDEAO 1975 Lagos • Togo 27 avril 1960 • ECM, vote à 18 ans, Travail - Liberté - Patrie</p></div>`;
 }
 if(page==='maths')a.innerHTML=`<button class="btn-dark" onclick="show('cours')">← Retour</button><h1>Maths - Réussir le BAC</h1>
-<div class="fiche"><h3>1. Limites</h3><p>lim 1/x = 0 en +∞. lim e^x = +∞. e^x domine toute puissance, toute puissance domine ln x.</p></div>
-<div class="fiche"><h3>2. Probabilités</h3><p>P(A barre)=1-P(A). P(A ∪ B)=P(A)+P(B)-P(A∩B). E(X)= somme x_i × p_i.</p></div>
+<div class="fiche"><h3>1. Limites de fonction</h3><p>lim 1/x = 0 en +∞. lim e^x = +∞. e^x domine toute puissance, toute puissance domine ln x.</p></div>
+<div class="fiche"><h3>2. Probabilités</h3><p>P(A barre)=1-P(A). P(A ∪ B)=P(A)+P(B)-P(A∩B). E(X)= somme x_i × p_i. P(A|B)=P(A∩B)/P(B).</p></div>
 ${state.premium?`
-<div class="fiche"><h3>3. Trigonométrie 🔓</h3><p>sin²x+cos²x=1. (sin x)'=cos x. cos(a+b)=cos a cos b - sin a sin b. sin(2a)=2 sin a cos a.</p></div>
+<div class="fiche"><h3>3. Trigonométrie 🔓</h3><p>sin²x+cos²x=1. (sin x)'=cos x. (cos x)'=-sin x. cos(a+b)=cos a cos b - sin a sin b. sin(2a)=2 sin a cos a. tan(a+b)=(tan a+tan b)/(1-tan a tan b).</p></div>
 <div class="fiche"><h3>4. Loi binomiale 🔓</h3><p>X ~ B(n,p). P(X=k)=C(n,k) p^k (1-p)^(n-k). E(X)=n p. Ex: 5 lancers, P(X=3)=10/32 ≈ 0,3125</p></div>
-<div class="fiche"><h3>5. Suites arithmétiques 🔓</h3><p>u_n = u0 + n×r. S_n = (n+1)(u0+u_n)/2.</p></div>
-<div class="fiche"><h3>6. Suites géométriques 🔓</h3><p>u_n = u0 × q^n. Somme = u0×(1-q^(n+1))/(1-q).</p></div>
-<div class="fiche"><h3>7. Exponentielle et Logarithme 🔓</h3><p>e^a × e^b = e^(a+b). ln(ab)=ln a + ln b. (e^x)'=e^x. (ln x)'=1/x.</p></div>
-<div class="fiche"><h3>8. Dérivation 🔓</h3><p>(u+v)'=u'+v'. (uv)'=u'v+uv'. (u/v)'=(u'v-uv')/v².</p></div>`
-:`<div class="card"><h2>🔒 Suite verrouillée</h2><p>Trigonométrie, Loi binomiale, Suites... réservé Premium.</p><button class="btn-gold" onclick="show('wallet')">Débloquer avec Premium - ${fmt(c.premium)} ${c.curr}</button></div>`}`;
-if(page==='phys')a.innerHTML=`<button class="btn-dark" onclick="show('cours')">← Retour</button><h1>Physique-Chimie</h1>
+<div class="fiche"><h3>5. Suites arithmétiques 🔓</h3><p>u_n = u0 + n×r. S_n = (n+1)(u0+u_n)/2. Monotonie selon r.</p></div>
+<div class="fiche"><h3>6. Suites géométriques 🔓</h3><p>u_n = u0 × q^n. Somme = u0×(1-q^(n+1))/(1-q) si q≠1.</p></div>
+<div class="fiche"><h3>7. Exponentielle et Logarithme 🔓</h3><p>e^a × e^b = e^(a+b). ln(ab)=ln a + ln b. (e^x)'=e^x. (ln x)'=1/x. lim ln x / x = 0.</p></div>
+<div class="fiche"><h3>8. Dérivation 🔓</h3><p>(u+v)'=u'+v'. (uv)'=u'v+uv'. (u/v)'=(u'v-uv')/v². (v∘u)'=v'(u)×u'.</p></div>`
+:`<div class="card"><h2>🔒 Suite verrouillée</h2><p>Trigonométrie, Loi binomiale, Suites, Exponentielle, Dérivation... réservé Premium.</p><button class="btn-gold" onclick="show('wallet')">Débloquer avec Premium - ${fmt(c.premium)} ${c.curr}</button></div>`}`;
+if(page==='phys')a.innerHTML=`<button class="btn-dark" onclick="show('cours')">← Retour</button><h1>Physique-Chimie - Tout pour réussir</h1>
 <div class="fiche"><h3>Acides aminés</h3><p>NH2-CHR-COOH. Zwitterion. Liaison peptidique.</p></div>
-<div class="fiche"><h3>Solutions & pH</h3><p>pH = -log[H3O+]. Neutre pH=7.</p></div>
-${state.premium?`<div class="fiche"><h3>Esters 🔓</h3><p>Acide + Alcool ⇌ Ester + Eau. Ester + Soude → Savon + Alcool.</p></div><div class="fiche"><h3>Mécanique 🔓</h3><p>ΣF = m·a. Ec=1/2 m v². Ep=m g h.</p></div><div class="fiche"><h3>Électricité 🔓</h3><p>U=R·I. q=C·U. τ=R·C.</p></div><div class="fiche"><h3>Optique 🔓</h3><p>1/OA' - 1/OA = 1/f'.</p></div><div class="fiche"><h3>Nucléaire 🔓</h3><p>N=N0·e^(-λt). T=ln2/λ. E=m c².</p></div><div class="fiche"><h3>Ondes 🔓</h3><p>f=1/T. λ=v·T.</p></div>`: `<div class="card"><h2>🔒 Suite verrouillée</h2><button class="btn-gold" onclick="show('wallet')">Débloquer avec Premium</button></div>`}`;
-if(page==='svt')a.innerHTML=`<button class="btn-dark" onclick="show('cours')">← Retour</button><h1>SVT</h1><div class="fiche"><h3>Génétique</h3><p>ADN, gène, allèle, mitose, méiose.</p></div><div class="fiche"><h3>Photosynthèse</h3><p>6CO2 + 6H2O → C6H12O6 + 6O2.</p></div>`;
-if(page==='quiz')a.innerHTML=`<h1>📝 Quiz - Mock Exam</h1><div id="quizBox"></div><button class="btn-gold" onclick="startQuiz()">Commencer le quiz</button><div class="card"><h3>🔒 Mode Intelligent Premium</h3><p>70% de questions sur tes points faibles.</p><button class="btn-dark" onclick="show('wallet')">Débloquer</button></div>`;
-if(page==='annales')a.innerHTML=`<h1>📄 Annales 2018-2025 - Togo BAC D</h1>
-<div class="card"><h3>Maths BAC D 2023</h3><p>Durée 4h - Coef 4</p><p><b>Q1:</b> Étudier f(x)=(x²-1)/(x-1)</p>${state.premium?`<p>🔓 Corrigé: f(x)=x+1 pour x≠1. Limite en 1 = 2. <b>Point Méthode:</b> Factorise (x²-1)=(x-1)(x+1).</p>`: `<p class="lock">Corrigé complet masqué...</p><button class="btn-gold" onclick="show('wallet')">🔒 Voir le corrigé complet - Premium</button>`}</div>
-<div class="card"><h3>Physique-Chimie 2023</h3><p>Durée 3h - Coef 3</p><p><b>Q1:</b> Chute libre h=1/2 g t²</p>${state.premium?`<p>🔓 Corrigé: h=1/2×10×4=20m pour t=2s.</p>`: `<button class="btn-gold" onclick="show('wallet')">🔒 Voir le corrigé - Premium</button>`}</div>`;
+<div class="fiche"><h3>Solutions & pH</h3><p>pH = -log[H3O+]. Neutre pH=7. Acide &lt;7, Basique &gt;7.</p></div>
+${state.premium?`<div class="fiche"><h3>Acides carboxyliques & Esters 🔓</h3><p>Acide + Alcool ⇌ Ester + Eau. Ester + Soude → Savon + Alcool (Saponification).</p></div><div class="fiche"><h3>Cinétique chimique 🔓</h3><p>Vitesse, temps de demi-réaction t1/2, température, catalyseur.</p></div><div class="fiche"><h3>Chimie organique 🔓</h3><p>Alcanes, alcènes, alcools, nomenclature.</p></div><div class="fiche"><h3>Mécanique 🔓</h3><p>ΣF = m·a. Ec=1/2 m v². Ep=m g h. W=F·d·cos α.</p></div><div class="fiche"><h3>Électricité 🔓</h3><p>U=R·I. q=C·U. τ=R·C. u_L=L di/dt.</p></div><div class="fiche"><h3>Optique 🔓</h3><p>1/OA' - 1/OA = 1/f'. γ=OA'/OA.</p></div><div class="fiche"><h3>Physique nucléaire 🔓</h3><p>N=N0·e^(-λt). T=ln2/λ. E=m c².</p></div><div class="fiche"><h3>Ondes 🔓</h3><p>f=1/T. λ=v·T. Diffraction.</p></div>`: `<div class="card"><h2>🔒 Suite verrouillée</h2><button class="btn-gold" onclick="show('wallet')">Débloquer avec Premium</button></div>`}`;
+if(page==='svt')a.innerHTML=`<button class="btn-dark" onclick="show('cours')">← Retour</button><h1>SVT</h1><div class="fiche"><h3>Génétique</h3><p>ADN, gène, allèle, mitose, méiose.</p></div><div class="fiche"><h3>Immunologie</h3><p>Anticorps, antigène, mémoire immunitaire.</p></div><div class="fiche"><h3>Photosynthèse</h3><p>6CO2 + 6H2O → C6H12O6 + 6O2.</p></div><div class="fiche"><h3>Écologie / Géologie / Reproduction</h3><p>Écosystème, tectonique, reproduction sexuée / asexuée.</p></div>`;
+// PAGE 9 QUIZ
+if(page==='quiz')a.innerHTML=`<h1>📝 Mock Exam & QCM Quiz</h1><p class="small">Simulateur en conditions réelles, correction instantanée.</p><div class="card"><p>Filtres: Tous • Maths • Physique • SVT • Hist-Géo • ECM</p></div><div id="quizBox"></div><button class="btn-gold" onclick="startQuiz()">Commencer le quiz</button><div class="card"><h3>🔒 Mode Intelligent Premium</h3><p>70% de questions sur tes points faibles. <button class="btn-dark" onclick="show('wallet')">Débloquer</button></p></div>`;
+// PAGE 8 ANNALES
+if(page==='annales')a.innerHTML=`<h1>📄 Annales Officielles & Corrigés</h1><p class="small">Par Année → Matière. Sources officielles.</p>
+<div class="card"><h3>Maths BAC D 2023</h3><p>Durée 4h - Coef 4</p><p><b>Q1:</b> Étudier f(x)=(x²-1)/(x-1)</p>${state.premium?`<p>🔓 Corrigé: f(x)=x+1 pour x≠1. Limite en 1 = 2. <b>Point Méthode Exclusif:</b> Factorise (x²-1)=(x-1)(x+1).</p>`: `<p class="lock">Corrigé complet masqué...</p><button class="btn-gold" onclick="show('wallet')">🔒 Voir le corrigé complet - Premium</button>`}</div>
+<div class="card"><h3>Physique-Chimie 2023</h3><p>Durée 3h - Coef 3</p><p><b>Q1:</b> Chute libre h=1/2 g t²</p>${state.premium?`<p>🔓 Corrigé: h=1/2×10×4=20m pour t=2s.</p>`: `<button class="btn-gold" onclick="show('wallet')">🔒 Voir le corrigé - Premium</button>`}</div>
+<div class="card"><h3>SVT 2023 - 3h Coef 3 • Français 2023 - 4h Coef 2 • Anglais • Philo • Hist-Géo</h3><p>Annales 2018-2025 • Voir sur la source officielle • Fiche de révision liée</p></div>`;
+// PAGE 10 WALLET
 if(page==='wallet'){let ops=c.ops.map(o=>`<div class="opt ${o===state.operateur?'sel':''}" onclick="state.operateur='${o}';show('wallet')"><span>${o}</span><span>✓</span></div>`).join('');a.innerHTML=`
-<h1>💰 Wallet & Premium</h1>
-<div class="card gold"><h2>Solde: ${fmt(c.bal)} ${c.curr}</h2><p>${c.flag} ${state.country} - ${c.code} • ${state.premium?'👑 PREMIUM':'GRATUIT'}</p></div>
+<h1>💰 Profil & Wallet</h1>
+<div class="card-gold"><h2>Solde: ${fmt(c.bal)} ${c.curr}</h2><p>${c.flag} ${state.country} - ${c.code} • ${state.premium?'👑 PREMIUM':'GRATUIT'}</p><p class="small">Style 1xbet - Recharge facile</p></div>
 <div class="card"><h3>Recharger</h3><p><b>Opérateurs disponibles au ${state.country} :</b></p>${ops}<p class="small">Paiement sécurisé via ${state.operateur} - ${state.country}</p><label>Montant</label><input id="mont" value="${c.premium}"><button class="btn-gold" onclick="recharger()">Recharger via ${state.operateur}</button></div>
 <div class="card">
   <h3>👑 Premium Pass</h3>
@@ -125,11 +150,25 @@ if(page==='wallet'){let ops=c.ops.map(o=>`<div class="opt ${o===state.operateur?
   <button class="btn-dark" onclick="payerMoov()">Payer avec Moov Money - +228 99 28 81 61</button>
   <button class="btn-white" onclick="payerWhatsApp()">Envoyer capture sur WhatsApp 📲 +228 72 23 05 80</button>
   <p class="small">Après ton paiement, envoie la capture sur WhatsApp au +228 72 23 05 80 et tu reçois ton code Premium.</p>
-</div>
-<div class="card"><h3>🛠️ Outils & Plus</h3><p>Partage P2P Bluetooth / Wi-Fi Direct sans internet • SOS Prof / Audio 2-3 min 🔒 Premium • Parrainage • Langue • Support</p></div>`}
+</div>`}
+// PAGE 10 PROFIL
+if(page==='profil')a.innerHTML=`<h1>👤 Profil</h1>
+<div class="card-gold center"><div style="font-size:50px">👤</div><h2>${state.userName}</h2><p>${c.flag} ${state.country} - ${c.exam} ${state.serie}</p><p>${state.premium?'👑 PREMIUM ACTIF':'GRATUIT'}</p></div>
+<div class="card"><h3>💰 Mon Wallet</h3><p>Solde: <b>${fmt(c.bal)} ${c.curr}</b></p><button class="btn-gold" onclick="show('wallet')">Recharger / Premium</button></div>
+<div class="card"><h3>🎁 Parrainage</h3><p>Ton code: <b>${state.codeParrain}</b></p><p>Chaque ami qui paie = 100 F CFA pour toi.</p><button class="btn-dark" onclick="alert('Lien copié : bac-reussite.app/invite/${state.codeParrain}')">Copier mon lien</button></div>
+<div class="card"><h3>⚙️ Paramètres</h3><p>Langue: Français / English • Support: WhatsApp +228 72 23 05 80</p></div>`;
+// PAGE 11 OUTILS
+if(page==='outils')a.innerHTML=`<h1>🛠️ Outils & Plus</h1>
+<div class="card"><h3>📤 Partage P2P sans internet</h3><p>Partage les cours par Bluetooth / Wi-Fi Direct, sans internet.</p><button class="btn-gold" onclick="alert('Partage P2P : active Bluetooth et choisis un ami à côté de toi.')">Partager sans internet 📤</button></div>
+<div class="card"><h3>🆘 SOS Prof - Audio 2-3 min ${state.premium?'🔓':'🔒'}</h3><p>Pose ta question, reçois une explication audio.</p>${state.premium?`<input placeholder="Ta question..."><button class="btn-gold" onclick="alert('SOS Prof : ton audio arrive dans 2-3 min.')">Demander mon audio 🎧</button>`: `<button class="btn-dark" onclick="show('wallet')">Débloquer avec Premium</button>`}</div>
+<div class="card"><h3>🌐 Langue • Parrainage • Support</h3><p>Français / English • WhatsApp: +228 72 23 05 80</p><button class="btn-white" onclick="payerWhatsApp()">Contacter le support</button></div>
+<div class="card"><h3>🎉 Célébration</h3><button class="btn-gold" onclick="show('celebration')">Voir ma réussite 🎓</button></div>`;
+// PAGE 12 CELEBRATION
+if(page==='celebration')a.innerHTML=`<div class="card-gold center"><div style="font-size:60px">🎓🎉</div><h1>${c.flag} BAC ${state.serie}</h1><h2>RÉUSSITE TOTALE</h2><p>Félicitations, ${state.userName} !</p><p>Tu as révisé. Tu as réussi. Tu as brillé.</p><p style="font-size:40px">🇹🇬 🎓 ✨</p><p class="small">Photo diplôme ici</p><button class="btn-dark" onclick="show('home')">Retour à l'accueil</button></div>`;
 document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
-let m={home:'nHome',cours:'nCours',quiz:'nQuiz',annales:'nAnn',wallet:'nWall'}[page];if(m)document.getElementById(m).classList.add('on');window.scrollTo(0,0)
+let m={splash:'nSplash',home:'nHome',cours:'nCours',quiz:'nQuiz',annales:'nAnn',wallet:'nWall',profil:'nProf',outils:'nOut'}[page];if(m)document.getElementById(m).classList.add('on');window.scrollTo(0,0)
 }
+function login(){let v=document.getElementById('prenom').value;if(v)state.userName=v;alert('Bienvenue, '+state.userName+' !');show('home');}
 function startQuiz(){
 let qs=[
 {q:'lim 1/x en +∞ = ?',a:['0','1','+∞'],r:0},
@@ -149,7 +188,7 @@ document.getElementById('quizBox').innerHTML=h;
 }
 function corrQuiz(){let ans=[0,0,0,0,0,0,0,0,0,0];let s=0;ans.forEach((a,i)=>{let v=document.querySelector(`input[name="q${i}"]:checked`);if(v&&parseInt(v.value)===a)s++});document.getElementById('score').innerHTML=`<h2>Score: ${s}/10 ${s>=6?'🎉 Bravo !':'💪 Continue !'}</h2><button class="btn-dark" onclick="startQuiz()">Recommencer - Nouvel ordre</button>`}
 function recharger(){let m=document.getElementById('mont').value;alert('Recharge '+m+' '+DATA[state.country].curr+' via '+(state.operateur||DATA[state.country].ops[0])+' - '+state.country+'\n\nEnvoie par '+ (state.operateur||DATA[state.country].ops[0]) +' et envoie capture WhatsApp au +228 72 23 05 80.')}
-show('home');
+show('splash');
 </script>
 </body>
 </html>
